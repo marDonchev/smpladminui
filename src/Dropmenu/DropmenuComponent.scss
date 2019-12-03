@@ -1,0 +1,76 @@
+@import "./../reset";
+@import "./../variables";
+@import "./../theme_default";
+@import "./../mixins";
+@import "./../fonts";
+@import "./../icons";
+
+.smpladmin_Dropmenu {
+	position: relative;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	button {
+		background: url(../img/icon_threedots_grey.svg) center no-repeat;
+		width: 32px;
+		height: 32px;
+		background-size: 19px;
+		cursor: pointer;
+		outline: 0;
+		border: 0;
+		padding: 0;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include mixin_animation(all);
+
+		&:hover {
+			background-color: $color_Grey7;
+		}
+	}
+
+	/* Menu */
+	.smpladmin_Dropmenu_Options {
+		position: absolute;
+		top: 32px;
+		right: 0;
+		background: white;
+		display: flex;
+		flex-direction: column;
+		align-content: stretch;
+		height: auto;
+		border: 0;
+		border-radius: 0;
+		border-bottom: 1px solid $color_Grey8;
+		float: right;
+		width: auto !important;
+		min-width: 200px;
+		padding: 5px;
+		display: none;
+
+		.smpladmin_Dropmenu_Option {
+			color: $color_Grey2;
+			font-size: $fontsize_13;
+			line-height: 1.5;
+			padding: 5px;
+			cursor: pointer;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			&:hover {
+				background-color: #fafafa !important;
+			}
+			i {
+				margin-right: $padding_Default10;
+				margin-bottom: -5px;
+			}
+		}
+	}
+
+	&:hover .smpladmin_Dropmenu_Options {
+		display: flex;
+	}
+}

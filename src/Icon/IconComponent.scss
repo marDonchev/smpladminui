@@ -1,0 +1,20 @@
+@import "./../reset";
+@import "./../variables";
+@import "./../theme_default";
+@import "./../mixins";
+@import "./../fonts";
+@import "./../icons";
+
+.smpladmin_Icon {
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	display: inline-block;
+
+	@include mixin_animation(all);
+	opacity: 0.5;
+
+	&:hover {
+		opacity: 1;
+	}
+}

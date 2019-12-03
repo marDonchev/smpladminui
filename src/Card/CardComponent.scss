@@ -1,0 +1,116 @@
+@import "./../reset";
+@import "./../variables";
+@import "./../theme_default";
+@import "./../mixins";
+@import "./../fonts";
+@import "./../icons";
+
+.smpladmin_Card {
+	background: white;
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+	width: 335px;
+	height: auto;
+	border: 0;
+	border-radius: 0;
+	border-bottom: 1px solid $color_Grey8;
+	min-height: 220px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+
+	.smpladmin_Card_Header {
+		color: $color_Grey3;
+		border-bottom: 1px solid $color_Grey9;
+		font-size: $fontsize_12;
+		width: 100%;
+		padding: $padding_Default10;
+		min-height: 43px;
+		align-self: center;
+		line-height: 1.8;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		box-sizing: border-box;
+	}
+	.smpladmin_Card_Body {
+		flex-grow: 2;
+		max-height: 123px;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+	.smpladmin_Card_BodyImage {
+		background-size: cover !important;
+		background-position: center !important;
+	}
+	.smpladmin_Card_BodyImage * {
+		display: none;
+	}
+	.smpladmin_Card_BodyFile {
+		background-image: url(../img/filetypes/txt.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 83px;
+	}
+	.smpladmin_Card_BodyFile h1 {
+		display: none;
+	}
+	.smpladmin_Card_BodyFile.application_pdf {
+		background-image: url(../img/filetypes/acrobat.png);
+	}
+	.smpladmin_Card_BodyFile.application_msword {
+		background-image: url(../img/filetypes/word.png);
+	}
+	.smpladmin_Card_BodyFile.application_vnd_openxmlformats_officedocument_wordprocessingml_document {
+		background-image: url(../img/filetypes/word.png);
+	}
+	.smpladmin_Card_BodyFile.application_zip {
+		background-image: url(../img/filetypes/archive.png);
+	}
+	.smpladmin_Card_BodyFile.application_x_rar {
+		background-image: url(../img/filetypes/archive.png);
+	}
+	.smpladmin_Card_BodyFile.application_vnd_openxmlformats_officedocument_spreadsheetml_sheet {
+		background-image: url(../img/filetypes/excel.png);
+	}
+	.smpladmin_Card_BodyFile.application_vnd_ms_excel {
+		background-image: url(../img/filetypes/excel.png);
+	}
+	.smpladmin_Card_BodyFile.audio_mpeg {
+		background-image: url(../img/filetypes/music.png);
+	}
+	.smpladmin_Card_BodyFile.application_vnd_openxmlformats_officedocument_presentationml_presentation {
+		background-image: url(../img/filetypes/powerpoint.png);
+	}
+	.smpladmin_Card_BodyFile.application_vnd_ms_powerpoint {
+		background-image: url(../img/filetypes/powerpoint.png);
+	}
+	.smpladmin_Card_BodyFile.text_plain {
+		background-image: url(../img/filetypes/txt.png);
+	}
+	.smpladmin_Card_BodyFile.video_mp4 {
+		background-image: url(../img/filetypes/video.png);
+	}
+
+	.smpladmin_Card_Body h1 {
+		color: $color_Grey2;
+		font-size: $fontsize_24;
+		line-height: 1.2;
+		padding: $padding_Default10;
+		font-weight: 500;
+		margin: 0;
+	}
+	.smpladmin_Card_Footer {
+		color: $color_Grey3;
+		border-top: 1px solid $color_Grey9;
+		font-size: $fontsize_12;
+		width: 100%;
+		text-align: right;
+		padding: $padding_Default10;
+		line-height: 1.1;
+		min-height: 53px;
+		align-self: center;
+		box-sizing: border-box;
+	}
+}

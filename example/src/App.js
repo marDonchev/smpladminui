@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import ExampleComponent from 'smpladminui'
+import ButtonComponent from "smpladminui";
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <ButtonComponent text="Modern React component module" />
       </div>
-    )
+    );
   }
 }

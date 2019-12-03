@@ -1,0 +1,147 @@
+@import "./../reset";
+@import "./../variables";
+@import "./../theme_default";
+@import "./../mixins";
+@import "./../fonts";
+@import "./../icons";
+
+.smpladmin_Reveal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	display: block;
+	background-color: rgba(10, 10, 10, 0.45);
+	overflow-y: scroll;
+	margin: 0;
+	padding: 0;
+
+	@include mixin_animation(all);
+}
+
+.smpladmin_Popup {
+	background: white;
+	padding: 0;
+	border-radius: 0;
+	outline: none;
+	border: 0;
+	overflow: hidden;
+	z-index: 2;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 500px;
+	transform: translateX(-50%) translateY(-50%);
+
+	-webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.36);
+	-moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.36);
+	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.36);
+
+	@include mixin_animation(all);
+
+	h1 {
+		background: $color_Blue1;
+		color: white;
+		padding: $padding_Default10 $padding_Default20 $padding_Default10
+			$padding_Default20;
+		font-size: $fontsize_18;
+		font-weight: 500;
+		margin: 0;
+		line-height: 1.4;
+		font-style: normal;
+		text-rendering: optimizeLegibility;
+		font-family: $font_roboto;
+	}
+
+	.smpladmin_Popup_CloseButton {
+		font-size: 1.7rem;
+		color: white;
+		line-height: 1;
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 38px;
+		width: 42px;
+		border: none;
+		background: transparent;
+		opacity: 0.5;
+		@include mixin_animation(all);
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.smpladmin_Popup_Hint {
+		background: $color_Yellow1 !important;
+		padding: $padding_Default10 $padding_Default20 $padding_Default10
+			$padding_Default20 !important;
+		color: $color_Grey3 !important;
+		font-size: $fontsize_13 !important;
+		margin: 0;
+	}
+
+	p {
+		padding: $padding_Default20;
+		color: $color_Grey2;
+		font-size: $fontsize_14;
+		margin: 0;
+
+		&.smpladmin_message {
+			padding-left: 30%;
+			padding-right: 30%;
+			font-size: 1.7rem;
+			text-align: center;
+			line-height: 1.4;
+			padding-bottom: #{$padding_Default20 + $padding_Default10};
+		}
+	}
+
+	input,
+	select {
+		border-radius: 0px;
+	}
+
+	label {
+		color: $color_Grey2;
+		font-size: $fontsize_14;
+	}
+	.label {
+		margin: 4px;
+		font-size: $fontsize_13;
+	}
+
+	.smpladmin_Popup_Footer {
+		color: $color_Grey3;
+		border-top: 1px solid $color_Grey9;
+		font-size: $fontsize_12;
+		width: 100%;
+		// text-align: right;
+		padding: $padding_Default10;
+		line-height: 1.1;
+		min-height: 53px;
+		align-self: center;
+		box-sizing: border-box;
+	}
+
+	.admin_Holder {
+		padding: $padding_Default20;
+		color: $color_Grey2;
+		font-size: $fontsize_14;
+		margin: 0;
+	}
+	.admin_FlexContainer {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: stretch;
+		align-content: stretch;
+
+		> * {
+			flex-grow: 1;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+@mixin mixin_animation($property, $time: "") {
+  -webkit-transition: $property 0.2s ease-out;
+  -moz-transition: $property 0.2s ease-out;
+  -o-transition: $property 0.2s ease-out;
+  transition: $property 0.2s ease-out;
+
+  @if $time != "" {
+    -webkit-transition: $property $time ease-out;
+    -moz-transition: $property $time ease-out;
+    -o-transition: $property $time ease-out;
+    transition: $property $time ease-out;
+  }
+}
+
+@mixin mixin_borderradius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}

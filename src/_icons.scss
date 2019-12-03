@@ -1,0 +1,99 @@
+@import "./_mixins.scss";
+/* ICONS */
+/* default behavior */
+i {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  display: inline-block;
+  @include mixin_animation(all);
+  opacity: 0.5;
+}
+i:hover {
+  opacity: 1;
+}
+
+i.smpladmin_icon_edit_white {
+  background: url(img/icon_edit_white.svg) center no-repeat;
+}
+i.smpladmin_icon_edit_grey {
+  background: url(img/icon_edit_grey.svg) center no-repeat;
+}
+i.smpladmin_icon_settings_grey {
+  background: url(img/icon_settings_grey.svg) center no-repeat;
+}
+i.smpladmin_icon_settings_white {
+  background: url(img/icon_settings_white.svg) center no-repeat;
+}
+i.smpladmin_icon_dashboard_white {
+  background: url(img/icon_dashboard_white.svg) center no-repeat;
+}
+i.smpladmin_icon_dashboard_grey {
+  background: url(img/icon_dashboard_grey.svg) center no-repeat;
+}
+i.smpladmin_icon_static_white {
+  background: url(img/icon_static_white.svg) center no-repeat;
+}
+i.smpladmin_icon_static_grey {
+  background: url(img/icon_static_white.svg) center no-repeat;
+}
+i.smpladmin_icon_structure_white {
+  background: url(img/icon_structure_white.svg) center no-repeat;
+}
+i.smpladmin_icon_structure_grey {
+  background: url(img/icon_structure_grey.svg) center no-repeat;
+}
+i.smpladmin_icon_collections_white {
+  background: url(img/icon_collections_white.svg) center no-repeat;
+}
+i.smpladmin_icon_collections_grey {
+  background: url(img/icon_collections_grey.svg) center no-repeat;
+}
+i.smpladmin_icon_files_white {
+  background: url(img/icon_files_white.svg) center no-repeat;
+}
+i.smpladmin_icon_files_grey {
+  background: url(img/icon_files_grey.svg) center no-repeat;
+}
+i.smpladmin_icon_projectsettings_white {
+  background: url(img/icon_projectsettings_white.svg) center no-repeat;
+}
+i.smpladmin_icon_projectsettings_grey {
+  background: url(img/icon_projectsettings_grey.svg) center no-repeat;
+}
+i.smpladmin_icon_bookmark_on_grey {
+  background: url(img/icon_bookmark_on_grey.svg) center no-repeat;
+}
+i.smpladmin_icon_bookmark_on_white {
+  background: url(img/icon_bookmark_on_white.svg) center no-repeat;
+}
+i.smpladmin_icon_bookmark_off_grey {
+  background: url(img/icon_bookmark_off_grey.svg) center no-repeat;
+}
+i.smpladmin_icon_bookmark_off_white {
+  background: url(img/icon_bookmark_off_white.svg) center no-repeat;
+}
+i.smpladmin_icon_listtype_list_grey {
+  background: url(img/icon_listtype_list_grey.svg) center no-repeat;
+}
+i.smpladmin_icon_listtype_list_white {
+  background: url(img/icon_listtype_list_white.svg) center no-repeat;
+}
+i.smpladmin_icon_listtype_cards_grey {
+  background: url(img/icon_listtype_cards_grey.svg) center no-repeat;
+}
+i.smpladmin_icon_listtype_cards_white {
+  background: url(img/icon_listtype_cards_white.svg) center no-repeat;
+}
+i.smpladmin_icon_logout_grey {
+  background: url(img/icon_logout_grey.svg) center no-repeat;
+}
+i.smpladmin_icon_logout_white {
+  background: url(img/icon_logout_white.svg) center no-repeat;
+}
+i.smpladmin_icon_threedots_white {
+  background: url(img/icon_threedots_white.svg) center no-repeat;
+}
+i.smpladmin_icon_threedots_grey {
+  background: url(img/icon_threedots_grey.svg) center no-repeat;
+}

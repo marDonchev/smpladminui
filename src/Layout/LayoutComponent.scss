@@ -1,0 +1,269 @@
+@import "./../reset";
+@import "./../variables";
+@import "./../basic";
+@import "./../theme_default";
+@import "./../mixins";
+@import "./../fonts";
+@import "./../icons";
+
+.smpladmin_Layout {
+	border: 1px solid $color_Grey5;
+	font-family: $font_roboto;
+	margin: 0;
+
+	.smpladmin_Layout_TopHeader {
+		display: flex;
+		width: 100%;
+		height: $size_layout_TopHeaderHeight;
+
+		& > div:first-child {
+			width: $size_layout_SidemenuWidth;
+			background: $color_defaultBlue;
+			color: white;
+			padding: $padding_Default20;
+			position: relative;
+			box-sizing: border-box;
+
+			h1 {
+				display: block;
+				color: $color_lightBlue;
+				font-size: $fontsize_14;
+				margin: 0;
+				margin-bottom: -1px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				line-height: 1.4;
+				font-family: $font_roboto;
+				font-weight: normal;
+			}
+
+			h2 {
+				color: $color_White;
+				font-size: $fontsize_24;
+				font-weight: 500;
+				display: block;
+				width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				margin: 0;
+				line-height: 1.4;
+				font-family: $font_roboto;
+				font-weight: normal;
+
+				&.admin_multiprojects {
+					padding-right: 35px;
+					background: url(../img/icon_downarrow_white.svg) right
+						no-repeat;
+					background-size: 20px;
+					cursor: pointer;
+				}
+			}
+
+			i.smpladmin_icon_edit_white {
+				position: absolute;
+				bottom: 20px;
+				right: 20px;
+			}
+
+			.dropdown-pane {
+				border: 0;
+				border-radius: 0;
+				border-bottom: 1px solid #d4d4d4;
+				border-right: 1px solid #d4d4d4;
+				color: $color_Grey1;
+				padding: 0;
+
+				ul {
+					list-style-type: none;
+					margin: 0px;
+
+					li {
+						padding: 10px;
+						&:hover {
+							background: $color_Grey7;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+
+		& > div:last-child {
+			background: $color_White;
+			flex-grow: 2;
+			padding: $padding_Default20;
+			position: relative;
+
+			> h1 {
+				font-size: $fontsize_18;
+				display: block;
+				margin: 0;
+				line-height: 1.4;
+				font-weight: normal;
+			}
+
+			> h2 {
+				display: block;
+				color: $color_Grey1;
+				font-size: $fontsize_12;
+				margin: 0;
+				line-height: 1.4;
+				font-weight: normal;
+			}
+
+			> .smpladmin_progress {
+				@include mixin_borderradius(10px);
+				height: 10px;
+				width: 50%;
+				background-color: #cacaca;
+
+				.smpladmin_progress-meter {
+					background-color: #5da423;
+					height: 100%;
+					position: relative;
+					display: block;
+					@include mixin_borderradius(10px);
+				}
+			}
+
+			> i.smpladmin_icon_logout_grey {
+				position: absolute;
+				bottom: 35px;
+				right: 20px;
+			}
+
+			> h3 {
+				font-size: $fontsize_18;
+				display: block;
+				color: $color_Grey4;
+				position: absolute;
+				right: 60px;
+				bottom: 34px;
+				text-align: right;
+				text-transform: uppercase;
+				margin: 0;
+				padding: 0;
+				line-height: 1.4;
+				font-weight: normal;
+			}
+		}
+	}
+
+	.smpladmin_Layout_MidBody {
+		display: flex;
+		height: calc(100vh - #{$size_layout_TopHeaderHeight});
+
+		> .smpladmin_Layout_SideBar {
+			padding-top: $padding_Default20;
+			width: $size_layout_SidemenuWidth;
+			background: $color_Grey2;
+			color: white;
+			min-width: $size_layout_SidemenuWidth;
+			position: relative;
+
+			> div.smpladmin_Layout_SideBar_item {
+				cursor: pointer;
+				padding: $padding_Default10 $padding_Default20
+					$padding_Default10 $padding_Default20;
+				position: relative;
+				@include mixin_animation(all);
+			}
+			> div.smpladmin_Layout_SideBar_item.smpladmin_selected,
+			> div.smpladmin_Layout_SideBar_item:hover {
+				background: $color_Grey6;
+			}
+			> div.smpladmin_Layout_SideBar_item i {
+				top: 12px;
+				left: 20px;
+				position: absolute;
+			}
+			> div.smpladmin_Layout_SideBar_item.smpladmin_selected i,
+			> div.smpladmin_Layout_SideBar_item:hover i {
+				opacity: 1;
+			}
+			> div.smpladmin_Layout_SideBar_item > h1 {
+				font-size: $fontsize_18;
+				color: $color_Grey5;
+				margin: 0;
+				margin-left: 30px;
+				font-weight: normal;
+				@include mixin_animation(all);
+			}
+			> div.smpladmin_Layout_SideBar_item > h2 {
+				font-size: $fontsize_12;
+				color: $color_Grey11;
+				line-height: 1;
+				margin: 0;
+				margin-left: 30px;
+				font-weight: normal;
+			}
+			> div.smpladmin_Layout_SideBar_item.smpladmin_selected h1,
+			> div.smpladmin_Layout_SideBar_item:hover h1 {
+				color: white;
+			}
+			> div.smpladmin_Layout_SideBar_Section {
+				color: $color_Grey3;
+				font-size: $fontsize_14;
+				padding-left: $padding_Default20;
+				margin-top: 2 * $padding_Default20;
+				margin-bottom: 5px;
+			}
+			> div.smpladmin_Layout_Footer {
+				background: $color_Grey6;
+				height: $size_layout_SidebarFooterHeight;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				cursor: pointer;
+				& > img {
+					width: 30px;
+					height: 30px;
+					@include mixin_borderradius(15px);
+					position: absolute;
+					bottom: 30px;
+					left: 20px;
+					background-size: cover;
+				}
+				& > span {
+					color: $color_Grey3;
+					font-size: $fontsize_14;
+					position: absolute;
+					bottom: 34px;
+					left: 20px;
+					width: calc(100% - 110px);
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					@include mixin_animation(all);
+				}
+				> i {
+					position: absolute;
+					bottom: 34px;
+					right: 10px;
+					background-size: 15px;
+				}
+				&:hover {
+					> span {
+						color: white;
+					}
+					> i {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		> .smpladmin_Layout_Page {
+			flex-grow: 2;
+			// padding: $padding_Default20;
+			position: relative;
+			overflow-y: auto;
+			overflow-x: hidden;
+			// margin-top: 50px;
+			// margin-bottom: 50px;
+		}
+	}
+}
