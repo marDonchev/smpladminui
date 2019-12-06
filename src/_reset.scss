@@ -1,4 +1,10 @@
 body {
-	box-sizing: border-box;
-	background-color: #eef3f6;
+  box-sizing: border-box;
+  background-color: #eef3f6;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
 }

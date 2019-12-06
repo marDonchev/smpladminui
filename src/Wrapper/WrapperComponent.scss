@@ -61,6 +61,7 @@
       &:focus {
         box-shadow: none;
         border: 1px solid $color_defaultBlue;
+        outline: none;
       }
     }
 
@@ -111,6 +112,18 @@
       }
     }
 
+    hr {
+      border-top: 1px solid $color_Grey5;
+    }
+
+    code {
+      background: $color_Grey5;
+      padding: 5px 8px 6px;
+      border-radius: 3px;
+      line-height: 1.5;
+      display: inline-block;
+    }
+
     button {
       height: 32px;
       color: $theme_color_defaultText;
@@ -129,6 +142,7 @@
       line-height: 1;
       margin: 0;
       display: inline-block;
+      width: auto;
 
       -webkit-appearance: none;
       -moz-appearance: none;

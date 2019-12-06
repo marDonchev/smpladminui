@@ -1,11 +1,11 @@
 /* Loading */
 .smpladmin_processing {
-	padding-left: 40px !important;
-	background-image: url(./img/loading_animation.svg) !important;
-	background-position: 5px !important;
-	/* border: 1px solid; */
-	background-repeat: no-repeat !important;
-	background-size: 25px !important;
-	pointer-events: none;
-	opacity: 0.5;
+  padding-left: 40px !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='30px' height='30px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' class='lds-rolling' style='background: none;'%3E%3Ccircle cx='50' cy='50' fill='none' ng-attr-stroke='%7B%7Bconfig.color%7D%7D' ng-attr-stroke-width='%7B%7Bconfig.width%7D%7D' ng-attr-r='%7B%7Bconfig.radius%7D%7D' ng-attr-stroke-dasharray='%7B%7Bconfig.dasharray%7D%7D' stroke='%233c82c6' stroke-width='12' r='30' stroke-dasharray='141.37166941154067 49.12388980384689' transform='rotate(72.651 50 50)'%3E%3CanimateTransform attributeName='transform' type='rotate' calcMode='linear' values='0 50 50;360 50 50' keyTimes='0;1' dur='1s' begin='0s' repeatCount='indefinite'%3E%3C/animateTransform%3E%3C/circle%3E%3C/svg%3E") !important;
+  background-position: 5px !important;
+  /* border: 1px solid; */
+  background-repeat: no-repeat !important;
+  background-size: 25px !important;
+  pointer-events: none;
+  opacity: 0.5;
 }

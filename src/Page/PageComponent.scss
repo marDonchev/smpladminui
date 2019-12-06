@@ -93,7 +93,8 @@
 
           &.admin_multiprojects {
             padding-right: 35px;
-            background: url(../img/icon_downarrow_white.svg) right no-repeat;
+            background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 22 22' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;'%3E%3Cg transform='matrix(-1,1.22465e-16,-1.22465e-16,-1,19.9744,16.4116)'%3E%3Cpath d='M8.833,0.325L17.343,10.324L0.322,10.324L8.833,0.325Z' style='fill:white;'/%3E%3C/g%3E%3C/svg%3E%0A")
+              right no-repeat;
             background-size: 20px;
             cursor: pointer;
           }
