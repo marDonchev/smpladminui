@@ -7,21 +7,19 @@
 ## Install
 
 ```bash
-npm install --save smpladminui
+npm install --save-dev smpladminui
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import MyComponent from 'smpladminui'
+import ButtonComponent from "smpladminui";
 
 class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
+  render() {
+    return <ButtonComponent />;
   }
 }
 ```
