@@ -1,38 +1,38 @@
-@import "./../_reset.scss";
-@import "./../_variables.scss";
-@import "./../_theme_default.scss";
-@import "./../_mixins.scss";
-@import "./../_fonts.scss";
-@import "./../_icons.scss";
+:global {
+  @import "./../variables";
+  @import "./../mixins";
+  @import "./../fonts";
+  @import "./../theme_variables";
 
-button.smpladmin_Button {
-  height: 32px;
-  color: $theme_color_defaultText;
-  font-family: $font_roboto;
-  font-size: $fontsize_13;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 0 20px;
-  cursor: pointer;
-  background-position: 5px !important;
-  background-repeat: no-repeat !important;
-  background-size: 25px !important;
-  outline: 0;
-  border: 0;
-  background: $theme_color_defaultBackground;
-  line-height: 1;
-  margin: 0;
-  display: inline-block;
+  button.smpladmin_Button {
+    height: 32px;
+    color: $theme_color_defaultText;
+    font-family: $font_roboto;
+    font-size: $fontsize_13;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 20px;
+    cursor: pointer;
+    background-position: 5px !important;
+    background-repeat: no-repeat !important;
+    background-size: 25px !important;
+    outline: 0;
+    border: 0;
+    background: $theme_color_defaultBackground;
+    line-height: 1;
+    margin: 0;
+    display: inline-block;
 
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 3px;
 
-  @include mixin_animation(all);
+    @include mixin_animation(all);
 
-  &:hover {
-    color: $theme_color_defaultText_hover;
-    background-color: $theme_color_defaultBackground_hover;
+    &:hover {
+      color: $theme_color_defaultText_hover;
+      background-color: $theme_color_defaultBackground_hover;
+    }
   }
 }

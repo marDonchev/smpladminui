@@ -1,76 +1,80 @@
-@import "./../reset";
-@import "./../variables";
-@import "./../theme_default";
-@import "./../mixins";
-@import "./../fonts";
-@import "./../icons";
+:global {
+  @import "./../reset";
+  @import "./../variables";
+  @import "./../mixins";
+  @import "./../fonts";
+  @import "./../icons";
+  @import "./../theme_variables";
 
-.smpladmin_Dropmenu {
-	position: relative;
-	width: 32px;
-	height: 32px;
-	display: inline-block;
-	button {
-		background: url(../img/icon_threedots_grey.svg) center no-repeat;
-		width: 32px;
-		height: 32px;
-		background-size: 19px;
-		cursor: pointer;
-		outline: 0;
-		border: 0;
-		padding: 0;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		position: absolute;
-		top: 0;
-		right: 0;
-		@include mixin_animation(all);
+  .smpladmin_Dropmenu {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    button {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 22 22' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;'%3E%3Ccircle cx='11' cy='3.517' r='2.517' style='fill:%23575f71;'/%3E%3Ccircle cx='11' cy='10.517' r='2.517' style='fill:%23575f71;'/%3E%3Ccircle cx='11' cy='17.517' r='2.517' style='fill:%23575f71;'/%3E%3C/svg%3E");
+      width: 32px;
+      height: 32px;
+      background-size: 19px;
+      cursor: pointer;
+      outline: 0;
+      border: 0;
+      padding: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include mixin_animation(all);
 
-		&:hover {
-			background-color: $color_Grey7;
-		}
-	}
+      &:hover {
+        background-color: $color_Grey7;
+      }
+    }
 
-	/* Menu */
-	.smpladmin_Dropmenu_Options {
-		position: absolute;
-		top: 32px;
-		right: 0;
-		background: white;
-		display: flex;
-		flex-direction: column;
-		align-content: stretch;
-		height: auto;
-		border: 0;
-		border-radius: 0;
-		border-bottom: 1px solid $color_Grey8;
-		float: right;
-		width: auto !important;
-		min-width: 200px;
-		padding: 5px;
-		display: none;
+    /* Menu */
+    .smpladmin_Dropmenu_Options {
+      position: absolute;
+      top: 32px;
+      right: 0;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-content: stretch;
+      height: auto;
+      border: 0;
+      border-radius: 0;
+      border-bottom: 1px solid $color_Grey8;
+      float: right;
+      width: auto !important;
+      min-width: 200px;
+      padding: 5px;
+      display: none;
 
-		.smpladmin_Dropmenu_Option {
-			color: $color_Grey2;
-			font-size: $fontsize_13;
-			line-height: 1.5;
-			padding: 5px;
-			cursor: pointer;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			&:hover {
-				background-color: #fafafa !important;
-			}
-			i {
-				margin-right: $padding_Default10;
-				margin-bottom: -5px;
-			}
-		}
-	}
+      .smpladmin_Dropmenu_Option {
+        color: $color_Grey2;
+        font-size: $fontsize_13;
+        line-height: 1.5;
+        padding: 5px;
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:hover {
+          background-color: #fafafa !important;
+        }
+        i {
+          margin-right: $padding_Default10;
+          margin-bottom: -5px;
+        }
+      }
+    }
 
-	&:hover .smpladmin_Dropmenu_Options {
-		display: flex;
-	}
+    &:hover .smpladmin_Dropmenu_Options {
+      display: flex;
+    }
+  }
 }

@@ -1,144 +1,146 @@
-@import "./../reset";
-@import "./../variables";
-@import "./../theme_default";
-@import "./../mixins";
-@import "./../fonts";
-@import "./../icons";
+:global {
+  @import "./../reset";
+  @import "./../variables";
+  @import "./../mixins";
+  @import "./../fonts";
+  @import "./../icons";
+  @import "./../theme_variables";
 
-.smpladmin_Wrapper {
-	color: $color_almostBlack;
-	font-family: $font_roboto;
+  .smpladmin_Wrapper {
+    color: $color_almostBlack;
+    font-family: $font_roboto;
 
-	/* Label */
-	label {
-		font-weight: normal;
-		line-height: 1.8;
-		display: block;
-		margin: 0;
-		color: $color_Grey1;
-		text-transform: uppercase;
-		font-size: 0.7rem;
-	}
+    /* Label */
+    label {
+      font-weight: normal;
+      line-height: 1.8;
+      display: block;
+      margin: 0;
+      color: $color_Grey1;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+    }
 
-	/* Input Elements */
-	button,
-	input,
-	optgroup select,
-	[type="text"],
-	[type="password"],
-	[type="date"],
-	[type="datetime"],
-	[type="datetime-local"],
-	[type="month"],
-	[type="week"],
-	[type="email"],
-	[type="number"],
-	[type="search"],
-	[type="tel"],
-	[type="time"],
-	[type="url"],
-	[type="color"],
-	textarea {
-		overflow: visible;
-		font-family: inherit;
-		font-size: 1rem;
-		font-weight: normal;
-		line-height: 1.5;
-		margin: 0 0 1rem;
-		display: block;
-		box-sizing: border-box;
-		width: 100%;
-		color: $color_Grey2;
-		padding: 4px 4px 4px 9px;
-		height: auto;
-		border-radius: 0;
-		background: $color_Grey10;
-		box-shadow: unset;
-		border: 1px solid $color_Grey9;
-		transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    /* Input Elements */
+    button,
+    input,
+    optgroup select,
+    [type="text"],
+    [type="password"],
+    [type="date"],
+    [type="datetime"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="week"],
+    [type="email"],
+    [type="number"],
+    [type="search"],
+    [type="tel"],
+    [type="time"],
+    [type="url"],
+    [type="color"],
+    textarea {
+      overflow: visible;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1.5;
+      margin: 0 0 1rem;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      color: $color_Grey2;
+      padding: 4px 4px 4px 9px;
+      height: auto;
+      border-radius: 0;
+      background: $color_Grey10;
+      box-shadow: unset;
+      border: 1px solid $color_Grey9;
+      transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 
-		&:focus {
-			box-shadow: none;
-			border: 1px solid $color_defaultBlue;
-		}
-	}
+      &:focus {
+        box-shadow: none;
+        border: 1px solid $color_defaultBlue;
+      }
+    }
 
-	::placeholder {
-		color: $color_Grey5;
-		opacity: 1; /* Firefox */
-	}
+    ::placeholder {
+      color: $color_Grey5;
+      opacity: 1; /* Firefox */
+    }
 
-	:-ms-input-placeholder {
-		/* Internet Explorer 10-11 */
-		color: $color_Grey5;
-	}
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $color_Grey5;
+    }
 
-	::-ms-input-placeholder {
-		/* Microsoft Edge */
-		color: $color_Grey5;
-	}
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: $color_Grey5;
+    }
 
-	a {
-		line-height: inherit;
-		color: $color_Blue1;
-		text-decoration: none;
-		cursor: pointer;
-		@include mixin_animation(all, 0.1s);
-		&:hover {
-			background-color: $color_Blue1;
-			color: white;
-		}
-	}
+    a {
+      line-height: inherit;
+      color: $color_Blue1;
+      text-decoration: none;
+      cursor: pointer;
+      @include mixin_animation(all, 0.1s);
+      &:hover {
+        background-color: $color_Blue1;
+        color: white;
+      }
+    }
 
-	h1 {
-		color: $color_Grey2;
-		text-transform: uppercase;
-		font-family: $font_roboto;
-		font-weight: 500;
-		font-size: $fontsize_14;
-		position: relative;
-		padding-bottom: $padding_Default10;
+    h1 {
+      color: $color_Grey2;
+      text-transform: uppercase;
+      font-family: $font_roboto;
+      font-weight: 500;
+      font-size: $fontsize_14;
+      position: relative;
+      padding-bottom: $padding_Default10;
 
-		&::after {
-			content: "";
-			height: 3px;
-			width: 60px;
-			background: $color_Grey2;
-			position: absolute;
-			top: 30px;
-			left: 0;
-		}
-	}
+      &::after {
+        content: "";
+        height: 3px;
+        width: 60px;
+        background: $color_Grey2;
+        position: absolute;
+        top: 30px;
+        left: 0;
+      }
+    }
 
-	button {
-		height: 32px;
-		color: $theme_color_defaultText;
-		font-family: $font_roboto;
-		font-size: $fontsize_13;
-		font-weight: 500;
-		text-transform: uppercase;
-		padding: 0 20px;
-		cursor: pointer;
-		background-position: 5px !important;
-		background-repeat: no-repeat !important;
-		background-size: 25px !important;
-		outline: 0;
-		border: 0;
-		background: $theme_color_defaultBackground;
-		line-height: 1;
-		margin: 0;
-		display: inline-block;
+    button {
+      height: 32px;
+      color: $theme_color_defaultText;
+      font-family: $font_roboto;
+      font-size: $fontsize_13;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 0 20px;
+      cursor: pointer;
+      background-position: 5px !important;
+      background-repeat: no-repeat !important;
+      background-size: 25px !important;
+      outline: 0;
+      border: 0;
+      background: $theme_color_defaultBackground;
+      line-height: 1;
+      margin: 0;
+      display: inline-block;
 
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		border-radius: 3px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border-radius: 3px;
 
-		@include mixin_animation(all);
+      @include mixin_animation(all);
 
-		&:hover {
-			color: $theme_color_defaultText_hover;
-			background-color: $theme_color_defaultBackground_hover;
-		}
-	}
+      &:hover {
+        color: $theme_color_defaultText_hover;
+        background-color: $theme_color_defaultBackground_hover;
+      }
+    }
+  }
 }
