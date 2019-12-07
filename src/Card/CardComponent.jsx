@@ -9,13 +9,11 @@ import Button from "./../Button/ButtonComponent.jsx";
 const propTypes = {
   header: PropTypes.oneOfType([
     PropTypes.bool,
-    PropTypes.func,
     PropTypes.string,
     PropTypes.object
   ]),
   footer: PropTypes.oneOfType([
     PropTypes.bool,
-    PropTypes.func,
     PropTypes.string,
     PropTypes.object
   ]),

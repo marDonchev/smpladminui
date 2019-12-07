@@ -25,17 +25,6 @@ const defaultProps = {
   processing: false
 };
 
-// export default class ButtonComponent extends Component {
-//   static propTypes = {
-//     text: PropTypes.string
-//   };
-
-//   render() {
-//     const { text } = this.props;
-
-//     return <div className={styles.test}>Example Component: {text}</div>;
-//   }
-// }
 class ButtonComponent extends Component {
   constructor(props) {
     super(props);

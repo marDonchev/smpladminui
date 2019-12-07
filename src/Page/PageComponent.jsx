@@ -6,7 +6,7 @@ import "./PageComponent.scss";
 const propTypes = {
   label: PropTypes.string.isRequired,
   stickyHeader: PropTypes.bool,
-  styles: PropTypes.object
+  style: PropTypes.object
 };
 
 const defaultProps = {
@@ -28,11 +28,11 @@ class PageComponent extends Component {
   };
 
   render() {
-    const styles = this.props.styles || {};
+    const style = this.props.style || {};
 
     return (
       <React.Fragment>
-        <div className={this.parseClasses()} style={styles}>
+        <div className={this.parseClasses()} style={style}>
           <div
             className={
               !this.props.stickyHeader
