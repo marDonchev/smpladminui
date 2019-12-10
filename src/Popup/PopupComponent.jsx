@@ -45,15 +45,20 @@ class PopupComponent extends Component {
     };
   }
 
-  componentDidMount() {
-    if (this.state.time && this.props.visible) {
+  componentDidUpdate(prevProps) {
+    if (
+      prevProps.visible === false &&
+      this.props.visible === true &&
+      this.props.time &&
+      this.props.time > 0
+    ) {
       this.setState({
-        timeInterval: setInterval(function() {
-          this.calculateTime();
-        }, 1000)
+        time: this.props.time,
+        timeInterval: setInterval(this.calculateTime, 1000)
       });
     }
   }
+
   parseClasses = () => {
     let classes = ["smpladmin_Popup"];
     if (this.props.primary) classes.push("smpladmin_primary");
@@ -77,6 +82,7 @@ class PopupComponent extends Component {
     if (time === 0 && this.props.onClose) {
       clearInterval(this.state.timeInterval);
       this.props.onClose();
+      this.setState({ timeInterval: null });
     }
   };
 
@@ -97,6 +103,11 @@ class PopupComponent extends Component {
               >
                 &times;
               </button>
+              {this.state.time && this.state.time > 0 ? (
+                <div className={"smpladmin_Popup_CloseText"}>
+                  Close in {this.state.time}s
+                </div>
+              ) : null}
               <h1>{this.props.label ? this.props.label : null}</h1>
               {this.props.hint ? (
                 <p className="smpladmin_Popup_Hint">{this.props.hint}</p>

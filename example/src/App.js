@@ -126,7 +126,6 @@ export default class App extends Component {
 
     let SCSSList = [];
     Object.keys(SCSS_Variables).forEach(item => {
-      console.log(item);
       SCSSList.push([item, SCSS_Variables[item]]);
     });
 
@@ -135,27 +134,22 @@ export default class App extends Component {
         <Wrapper>
           <h2 style={{ fontSize: "3rem" }}>smpladminui - Simple Admin UI</h2>
           <h1>React Components Library</h1>
-          <p>
-            This is a set of simple UI components that can help you build simple
-            Admin interface with a basic functionality.
-            <br />
-            <br />
-            <hr />
-            <h4>Installation</h4>
-            <p>
-              <code>
-                npm install <strong>smpladminui</strong> --save-dev
-              </code>
-            </p>
-            <br />
-            <h4>Usage</h4>
-            <p>
-              You can import all the components into your application using the
-              following lines:
-            </p>
-            <pre>
-              <code>
-                {`import {
+          This is a set of simple UI components that can help you build simple
+          Admin interface with a basic functionality.
+          <br />
+          <br />
+          <hr />
+          <h4>Installation</h4>
+          <code>
+            npm install <strong>smpladminui</strong> --save-dev
+          </code>
+          <br />
+          <h4>Usage</h4>
+          You can import all the components into your application using the
+          following lines:
+          <pre>
+            <code>
+              {`import {
   ButtonComponent as Button,
   LayoutComponent as Layout,
   PageComponent as Page,
@@ -167,37 +161,38 @@ export default class App extends Component {
   WrapperComponent as Wrapper,
   scss_variables as SCSS_Variables
 } from "smpladminui";`}
-              </code>
-            </pre>
-            <br />
-            <p>
-              Or you can import only single (or set) of the components if you
-              like:
-            </p>
-            <code>
-              {`import { ButtonComponent as Button } from "smpladminui";`}
             </code>
-            <p>And somewhere on your render code you can type this:</p>
-            <code>{`<Button primary>+ add new</Button>`}</code>
-            <p>
-              This will visualize a button from the smpladminui set of
-              components.
-            </p>
-            <hr />
-            <p>
-              Below you can see a list of all the components in their small
-              variations. <br />
-              For more detailed information about the props please visit the{" "}
-              <a
-                href="https://www.npmjs.com/package/smpladminui"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                NPM page
-              </a>
-              .
-            </p>
-          </p>
+          </pre>
+          <br />
+          Or you can import only single (or set) of the components if you like:
+          <br />
+          <br />
+          <code>
+            {`import { ButtonComponent as Button } from "smpladminui";`}
+          </code>
+          <br />
+          <br />
+          And somewhere on your render code you can type this:
+          <br />
+          <br />
+          <code>{`<Button primary>+ add new</Button>`}</code>
+          <br />
+          <br />
+          This will visualize a button from the smpladminui set of components.
+          <br />
+          <br />
+          <hr />
+          Below you can see a list of all the components in their small
+          variations. <br />
+          For more detailed information about the props please visit the{" "}
+          <a
+            href="https://www.npmjs.com/package/smpladminui"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            NPM page
+          </a>
+          .
           <br />
           <br />
           <br />
@@ -303,8 +298,12 @@ export default class App extends Component {
         </Wrapper>
         <div>
           <Button onClick={this.togglePopupVisible}>Show popup</Button>
-          <Button onClick={this.togglePopup2Visible}>Show second popup</Button>
-          <Button onClick={this.togglePopup3Visible}>Show third popup</Button>
+          <Button onClick={this.togglePopup2Visible}>
+            Show autoclose message
+          </Button>
+          <Button onClick={this.togglePopup3Visible}>
+            Show popup w/ icons
+          </Button>
           <br />
           <Popup
             visible={this.state.popupVisible}

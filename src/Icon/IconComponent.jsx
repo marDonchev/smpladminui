@@ -5,7 +5,7 @@ import "./IconComponent.scss";
 
 const propTypes = {
   type: PropTypes.string.isRequired,
-  variant: PropTypes.string.string,
+  variant: PropTypes.oneOfType([PropTypes.string.string, PropTypes.any]),
   onClick: PropTypes.func,
   style: PropTypes.object,
   disabled: PropTypes.oneOfType([
