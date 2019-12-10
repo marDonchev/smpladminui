@@ -80,14 +80,14 @@
       background: $color_Yellow !important;
       padding: $padding_Default10 $padding_Default20 $padding_Default10
         $padding_Default20 !important;
-      color: $color_Grey3 !important;
+      color: $color_Grey6 !important;
       font-size: $fontsize_13 !important;
       margin: 0;
     }
 
     p {
       padding: $padding_Default20;
-      color: $color_Grey2;
+      color: $color_Grey1;
       font-size: $fontsize_14;
       margin: 0;
 
@@ -107,7 +107,7 @@
     }
 
     label {
-      color: $color_Grey2;
+      color: $color_Grey1;
       font-size: $fontsize_14;
     }
     .label {
@@ -116,8 +116,8 @@
     }
 
     .smpladmin_Popup_Footer {
-      color: $color_Grey3;
-      border-top: 1px solid $color_Grey9;
+      color: $color_Grey6;
+      border-top: 1px solid $color_Grey4;
       font-size: $fontsize_12;
       width: 100%;
       // text-align: right;
@@ -130,7 +130,7 @@
 
     .admin_Holder {
       padding: $padding_Default20;
-      color: $color_Grey2;
+      color: $color_Grey1;
       font-size: $fontsize_14;
       margin: 0;
     }

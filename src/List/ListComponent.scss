@@ -13,7 +13,7 @@
     flex-direction: column;
     align-content: stretch;
     height: auto;
-    border-bottom: 1px solid $color_Grey8;
+    border-bottom: 1px solid $color_Grey6;
     margin-bottom: 3 * $padding_Default10;
     box-sizing: border-box;
 
@@ -26,15 +26,15 @@
       width: 100%;
 
       tr {
-        border-bottom: 1px solid $color_Grey9 !important;
+        border-bottom: 1px solid $color_Grey4 !important;
         box-sizing: border-box;
         &:not(:first-child):hover {
-          background-color: $color_Grey10 !important;
+          background-color: $color_Grey5 !important;
         }
       }
 
       th {
-        color: $color_Grey3;
+        color: $color_Grey6;
         font-size: $fontsize_12;
         padding: $padding_Default10;
         min-height: 43px;
@@ -55,7 +55,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         font-size: $fontsize_18;
-        color: $color_Grey2;
+        color: $color_Grey1;
         box-sizing: border-box;
         padding: $padding_Default10;
 
@@ -72,7 +72,7 @@
     }
 
     .smpladmin_List_Footer {
-      color: $color_Grey3;
+      color: $color_Grey6;
       font-size: $fontsize_12;
       width: 100%;
       text-align: right;

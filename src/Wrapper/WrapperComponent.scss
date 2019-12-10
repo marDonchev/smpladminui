@@ -49,13 +49,13 @@
       display: block;
       box-sizing: border-box;
       width: 100%;
-      color: $color_Grey2;
+      color: $color_Grey1;
       padding: 4px 4px 4px 9px;
       height: auto;
       border-radius: 0;
-      background: $color_Grey10;
+      background: $color_Grey5;
       box-shadow: unset;
-      border: 1px solid $color_Grey9;
+      border: 1px solid $color_Grey4;
       transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 
       &:focus {
@@ -66,18 +66,18 @@
     }
 
     ::placeholder {
-      color: $color_Grey5;
+      color: $color_Grey2;
       opacity: 1; /* Firefox */
     }
 
     :-ms-input-placeholder {
       /* Internet Explorer 10-11 */
-      color: $color_Grey5;
+      color: $color_Grey2;
     }
 
     ::-ms-input-placeholder {
       /* Microsoft Edge */
-      color: $color_Grey5;
+      color: $color_Grey2;
     }
 
     a {
@@ -93,7 +93,7 @@
     }
 
     h1 {
-      color: $color_Grey2;
+      color: $color_Grey1;
       text-transform: uppercase;
       font-family: $font_roboto;
       font-weight: 500;
@@ -105,7 +105,7 @@
         content: "";
         height: 3px;
         width: 60px;
-        background: $color_Grey2;
+        background: $color_Grey1;
         position: absolute;
         top: 30px;
         left: 0;
@@ -113,11 +113,11 @@
     }
 
     hr {
-      border-top: 1px solid $color_Grey5;
+      border-top: 1px solid $color_Grey2;
     }
 
     code {
-      background: $color_Grey5;
+      background: $color_Grey2;
       padding: 5px 8px 6px;
       border-radius: 3px;
       line-height: 1.5;

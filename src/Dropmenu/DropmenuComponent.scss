@@ -31,7 +31,7 @@
       @include mixin_animation(all);
 
       &:hover {
-        background-color: $color_Grey7;
+        background-color: $color_Grey4;
       }
     }
 
@@ -47,7 +47,7 @@
       height: auto;
       border: 0;
       border-radius: 0;
-      border-bottom: 1px solid $color_Grey8;
+      border-bottom: 1px solid $color_Grey6;
       float: right;
       width: auto !important;
       min-width: 200px;
@@ -55,7 +55,7 @@
       display: none;
 
       .smpladmin_Dropmenu_Option {
-        color: $color_Grey2;
+        color: $color_Grey1;
         font-size: $fontsize_13;
         line-height: 1.5;
         padding: 5px;
@@ -64,7 +64,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         &:hover {
-          background-color: $color_Grey10 !important;
+          background-color: $color_Grey5 !important;
         }
         i {
           margin-right: $padding_Default10;

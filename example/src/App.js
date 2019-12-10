@@ -124,9 +124,14 @@ export default class App extends Component {
       ]
     ];
 
+    let SCSSList = [];
+    Object.keys(SCSS_Variables).forEach(item => {
+      console.log(item);
+      SCSSList.push([item, SCSS_Variables[item]]);
+    });
+
     return (
       <div>
-        SCSS_Variables =<pre>{JSON.stringify(SCSS_Variables, null, 2)}</pre>
         <Wrapper>
           <h2 style={{ fontSize: "3rem" }}>smpladminui - Simple Admin UI</h2>
           <h1>React Components Library</h1>
@@ -159,7 +164,8 @@ export default class App extends Component {
   ListComponent as List,
   PopupComponent as Popup,
   IconComponent as Icon,
-  WrapperComponent as Wrapper
+  WrapperComponent as Wrapper,
+  scss_variables as SCSS_Variables
 } from "smpladminui";`}
               </code>
             </pre>
@@ -395,6 +401,13 @@ export default class App extends Component {
           <h6>Title 6 / H6</h6>
           <button>My Button</button>
         </Wrapper>
+        <Wrapper>
+          <hr />
+          <br />
+          <h1>SCSS Variables</h1>
+          <br />
+        </Wrapper>
+        <List header={["Key", "Value"]} list={SCSSList} footer={null} />
       </div>
     );
   }

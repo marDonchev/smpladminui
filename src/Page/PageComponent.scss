@@ -25,14 +25,14 @@
         top: 91px;
         padding: #{2 * $padding_Default10} $padding_Default10 #{2 * $padding_Default10}
           #{2 * $padding_Default10};
-        background: $color_Grey8;
+        background: $color_Grey6;
         margin-left: -#{2 * $padding_Default10};
       }
     }
 
     .smpladmin_Page_PageTitle,
     h1 {
-      color: $color_Grey2;
+      color: $color_Grey1;
       text-transform: uppercase;
       font-family: $font_roboto;
       font-weight: 500;
@@ -43,7 +43,7 @@
         content: "";
         height: 3px;
         width: 60px;
-        background: $color_Grey2;
+        background: $color_Grey1;
         position: absolute;
         top: 30px;
         left: 0;
@@ -109,8 +109,8 @@
         .dropdown-pane {
           border: 0;
           border-radius: 0;
-          border-bottom: 1px solid $color_Grey8;
-          border-right: 1px solid $color_Grey8;
+          border-bottom: 1px solid $color_Grey6;
+          border-right: 1px solid $color_Grey6;
           color: $color_Grey1;
           padding: 0;
 
@@ -121,7 +121,7 @@
             li {
               padding: 10px;
               &:hover {
-                background: $color_Grey7;
+                background: $color_Grey4;
                 cursor: pointer;
               }
             }
@@ -156,7 +156,7 @@
           @include mixin_borderradius(10px);
           height: 10px;
           width: 50%;
-          background-color: $color_Grey8;
+          background-color: $color_Grey6;
 
           .smpladmin_progress-meter {
             background-color: $color_Success;
@@ -176,7 +176,7 @@
         > h3 {
           font-size: $fontsize_18;
           display: block;
-          color: $color_Grey4;
+          color: $color_Grey1;
           position: absolute;
           right: 60px;
           bottom: 34px;
@@ -197,7 +197,7 @@
       > .smpladmin_Layout_SideBar {
         padding-top: $padding_Default20;
         width: $size_layout_SidemenuWidth;
-        background: $color_Grey2;
+        background: $color_Grey1;
         color: white;
         min-width: $size_layout_SidemenuWidth;
         position: relative;
@@ -211,7 +211,7 @@
         }
         > div.smpladmin_Layout_SideBar_item.smpladmin_selected,
         > div.smpladmin_Layout_SideBar_item:hover {
-          background: $color_Grey6;
+          background: $color_Grey3;
         }
         > div.smpladmin_Layout_SideBar_item i {
           top: 12px;
@@ -224,7 +224,7 @@
         }
         > div.smpladmin_Layout_SideBar_item > h1 {
           font-size: $fontsize_18;
-          color: $color_Grey5;
+          color: $color_Grey2;
           margin: 0;
           margin-left: 30px;
           font-weight: normal;
@@ -232,7 +232,7 @@
         }
         > div.smpladmin_Layout_SideBar_item > h2 {
           font-size: $fontsize_12;
-          color: $color_Grey11;
+          color: $color_Grey6;
           line-height: 1;
           margin: 0;
           margin-left: 30px;
@@ -243,14 +243,14 @@
           color: white;
         }
         > div.smpladmin_Layout_SideBar_Section {
-          color: $color_Grey3;
+          color: $color_Grey6;
           font-size: $fontsize_14;
           padding-left: $padding_Default20;
           margin-top: 2 * $padding_Default20;
           margin-bottom: 5px;
         }
         > div.smpladmin_Layout_Footer {
-          background: $color_Grey6;
+          background: $color_Grey3;
           height: $size_layout_SidebarFooterHeight;
           position: absolute;
           bottom: 0;
@@ -267,7 +267,7 @@
             background-size: cover;
           }
           & > span {
-            color: $color_Grey3;
+            color: $color_Grey6;
             font-size: $fontsize_14;
             position: absolute;
             bottom: 34px;

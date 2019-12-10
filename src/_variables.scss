@@ -1,21 +1,19 @@
 // Variables
-
-//$color_Grey: #494c51;
-$color_Hover: #ddd;
-
 $color_almostBlack: #333;
 $color_Grey1: #575f71;
-$color_Grey2: #575f71;
-$color_Grey3: #b6b6b6;
-$color_Grey4: #666;
-$color_Grey5: #d0d4dd;
-$color_Grey6: #505969;
-$color_Grey7: #dddfe3;
-$color_Grey8: #d4d4d4;
-$color_Grey9: #f1f1f1;
-$color_Grey10: #fafafa;
-$color_Grey11: #89909f;
+$color_Grey2: #d0d4dd;
+$color_Grey3: #505969;
+$color_Grey4: #dddfe3;
+$color_Grey5: #fafafa;
+$color_Grey6: #89909f;
 $color_Yellow: #fefad2;
+
+$color_Success: #029c4f;
+$color_Danger: #ec403e;
+$color_Primary: #3c82c6;
+$color_lightPrimary: lighten($color_Primary, 25); //#9dc0e2;
+$color_White: white;
+$color_PageBackground: lighten($color_Primary, 48); //#eef3f6;
 
 $size_borderWeight: 2px;
 $size_elementHeight: 17px;
@@ -33,21 +31,12 @@ $fontsize_14: 1rem;
 $fontsize_18: 1.1rem;
 $fontsize_24: 1.5rem;
 
-$color_Success: #029c4f;
-$color_Danger: #ec403e;
-$color_Primary: #3c82c6;
-$color_lightPrimary: lighten($color_Primary, 25); //#9dc0e2;
-$color_White: white;
-$color_PageBackground: lighten($color_Primary, 48); //#eef3f6;
-
 $icons_grey: #575f71;
 $icons_white: #ffffff;
 //B6B6B6
 //777777
 // To be used by webpack
 :export {
-  color_Primary: $color_Primary;
-
   // font sizes
   fontsize_11: $fontsize_11;
   fontsize_12: $fontsize_12;
@@ -59,4 +48,33 @@ $icons_white: #ffffff;
   // icons
   icons_grey: $icons_grey;
   icons_white: $icons_white;
+
+  // padding
+  padding_Default20: $padding_Default20;
+  padding_Default10: $padding_Default10;
+
+  // sizes
+  size_borderWeight: $size_borderWeight;
+  size_elementHeight: $size_elementHeight;
+  size_layout_TopHeaderHeight: $size_layout_TopHeaderHeight;
+  size_layout_SidemenuWidth: $size_layout_SidemenuWidth;
+  size_layout_SidebarFooterHeight: $size_layout_SidebarFooterHeight;
+
+  // colors
+  color_almostBlack: $color_almostBlack;
+  color_Grey1: $color_Grey1;
+  color_Grey2: $color_Grey2;
+  color_Grey3: $color_Grey3;
+  color_Grey4: $color_Grey4;
+  color_Grey5: $color_Grey5;
+  color_Grey6: $color_Grey6;
+  color_Yellow: $color_Yellow;
+
+  color_Primary: $color_Primary;
+  color_Success: $color_Success;
+  color_Danger: $color_Danger;
+  color_Primary: $color_Primary;
+  color_lightPrimary: $color_lightPrimary; //#9dc0e2;
+  color_White: $color_White;
+  color_PageBackground: $color_PageBackground; //#eef3f6;
 }
