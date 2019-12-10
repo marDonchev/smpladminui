@@ -24,6 +24,16 @@
     }
   }
 
+  .smpladmin_success {
+    color: $theme_color_successText !important;
+    background-color: $theme_color_successBackground !important;
+
+    &:hover {
+      color: $theme_color_successText_hover !important;
+      background-color: $theme_color_successBackground_hover !important;
+    }
+  }
+
   .smpladmin_danger {
     color: $theme_color_dangerText !important;
     background-color: $theme_color_dangerBackground !important;

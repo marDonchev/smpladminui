@@ -60,7 +60,7 @@
 
       &:focus {
         box-shadow: none;
-        border: 1px solid $color_defaultBlue;
+        border: 1px solid $color_Primary;
         outline: none;
       }
     }
@@ -82,12 +82,12 @@
 
     a {
       line-height: inherit;
-      color: $color_Blue1;
+      color: $color_Primary;
       text-decoration: none;
       cursor: pointer;
       @include mixin_animation(all, 0.1s);
       &:hover {
-        background-color: $color_Blue1;
+        background-color: $color_Primary;
         color: white;
       }
     }

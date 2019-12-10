@@ -13,7 +13,11 @@ const propTypes = {
   centerRightIcon: PropTypes.object,
   centerRightText: PropTypes.string,
   progress: PropTypes.number,
-  style: PropTypes.object
+  style: PropTypes.object,
+  primary: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
+  danger: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
+  success: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
+  processing: PropTypes.oneOfType([PropTypes.bool, PropTypes.any])
 };
 
 const defaultProps = {
@@ -69,7 +73,11 @@ const defaultProps = {
       icon: <Icon type={"projectsettings"} variant={"white"} />,
       selected: false
     }
-  ]
+  ],
+  primary: false,
+  danger: false,
+  success: false,
+  processing: false
 };
 
 class LayoutComponent extends Component {
@@ -82,6 +90,8 @@ class LayoutComponent extends Component {
     let classes = ["smpladmin_Layout"];
     if (this.props.primary) classes.push("smpladmin_primary");
     if (this.props.danger) classes.push("smpladmin_danger");
+    if (this.props.success) classes.push("smpladmin_success");
+    if (this.props.processing) classes.push("smpladmin_processing");
     return classes.join(" ");
   };
 

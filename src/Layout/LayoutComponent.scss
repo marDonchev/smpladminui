@@ -19,7 +19,7 @@
 
       & > div:first-child {
         width: $size_layout_SidemenuWidth;
-        background: $color_defaultBlue;
+        background: $color_Primary;
         color: white;
         padding: $padding_Default20;
         position: relative;
@@ -27,7 +27,7 @@
 
         h1 {
           display: block;
-          color: $color_lightBlue;
+          color: $color_lightPrimary;
           font-size: $fontsize_14;
           margin: 0;
           margin-bottom: -1px;
@@ -71,8 +71,8 @@
         .dropdown-pane {
           border: 0;
           border-radius: 0;
-          border-bottom: 1px solid #d4d4d4;
-          border-right: 1px solid #d4d4d4;
+          border-bottom: 1px solid $color_Grey8;
+          border-right: 1px solid $color_Grey8;
           color: $color_Grey1;
           padding: 0;
 
@@ -118,10 +118,10 @@
           @include mixin_borderradius(10px);
           height: 10px;
           width: 50%;
-          background-color: #cacaca;
+          background-color: $color_Grey9;
 
           .smpladmin_progress-meter {
-            background-color: #5da423;
+            background-color: $color_Success;
             height: 100%;
             position: relative;
             display: block;

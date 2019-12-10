@@ -9,7 +9,8 @@ import {
   ListComponent as List,
   PopupComponent as Popup,
   IconComponent as Icon,
-  WrapperComponent as Wrapper
+  WrapperComponent as Wrapper,
+  scss_variables as SCSS_Variables
 } from "smpladminui";
 
 export default class App extends Component {
@@ -125,6 +126,7 @@ export default class App extends Component {
 
     return (
       <div>
+        SCSS_Variables =<pre>{JSON.stringify(SCSS_Variables, null, 2)}</pre>
         <Wrapper>
           <h2 style={{ fontSize: "3rem" }}>smpladminui - Simple Admin UI</h2>
           <h1>React Components Library</h1>
@@ -194,11 +196,9 @@ export default class App extends Component {
           <br />
           <br />
         </Wrapper>
-
         <br />
         <br />
         <br />
-
         <Wrapper>
           <hr />
           <br />
@@ -207,9 +207,10 @@ export default class App extends Component {
         </Wrapper>
         <div>
           <Button primary onClick={evt => alert("test")}>
-            My Button
+            Primary Button
           </Button>
-          <Button label={"No Action"} danger />
+          <Button success label={"Success"} />
+          <Button label={"Danger"} danger />
           <Button title="This is the title of the button">Normal Button</Button>
           <Button />
           <Button primary>+ add new</Button>
@@ -222,7 +223,6 @@ export default class App extends Component {
           <br />
           <h1>Dropmenu</h1>
         </Wrapper>
-
         <div style={{ display: "block" }}>
           <Dropmenu style={{ float: "right" }} />
         </div>
@@ -236,7 +236,7 @@ export default class App extends Component {
           <br />
           <h1>Layout</h1>
         </Wrapper>
-        <Layout progress={0}>
+        <Layout progress={30}>
           <Page>
             <Wrapper>
               This is my page
@@ -249,7 +249,6 @@ export default class App extends Component {
             </Wrapper>
           </Page>
         </Layout>
-
         <Wrapper>
           <hr />
           <br />
@@ -273,27 +272,29 @@ export default class App extends Component {
                 />
               </React.Fragment>
             }
+            footer={
+              <React.Fragment>
+                <Button success>SEND</Button>
+                <Button primary>OPEN</Button>
+              </React.Fragment>
+            }
           >
             <h1>UX Science progress experiment.</h1>
           </Card>
         </div>
-
         <Wrapper style={{ clear: "both" }}>
           <hr />
           <br />
           <h1>List</h1>
         </Wrapper>
-
         <div>
           <List />
         </div>
-
         <Wrapper>
           <hr />
           <br />
           <h1>Popup</h1>
         </Wrapper>
-
         <div>
           <Button onClick={this.togglePopupVisible}>Show popup</Button>
           <Button onClick={this.togglePopup2Visible}>Show second popup</Button>
@@ -361,25 +362,21 @@ export default class App extends Component {
             Wins!
           </Popup>
         </div>
-
         <Wrapper>
           <hr />
           <br />
           <h1>Icons</h1>
         </Wrapper>
-
         <List
           header={["Icon", "Type", "Variant", "Code"]}
           list={Iconslist}
           footer={null}
         />
-
         <Wrapper>
           <hr />
           <br />
           <h1>Wrapper</h1>
         </Wrapper>
-
         <Wrapper>
           <label>
             This is label

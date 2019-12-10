@@ -43,7 +43,7 @@
     @include mixin_animation(all);
 
     h1 {
-      background: $color_Blue1;
+      background: $color_Primary;
       color: white;
       padding: $padding_Default10 $padding_Default20 $padding_Default10
         $padding_Default20;
@@ -77,7 +77,7 @@
     }
 
     .smpladmin_Popup_Hint {
-      background: $color_Yellow1 !important;
+      background: $color_Yellow !important;
       padding: $padding_Default10 $padding_Default20 $padding_Default10
         $padding_Default20 !important;
       color: $color_Grey3 !important;

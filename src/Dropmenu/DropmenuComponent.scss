@@ -64,7 +64,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         &:hover {
-          background-color: #fafafa !important;
+          background-color: $color_Grey10 !important;
         }
         i {
           margin-right: $padding_Default10;

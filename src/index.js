@@ -5,6 +5,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import styles from "./_theme_default.scss";
+import scss_variables from "./_variables.scss";
 import ButtonComponent from "./Button/ButtonComponent.jsx";
 import CardComponent from "./Card/CardComponent.jsx";
 import DropmenuComponent from "./Dropmenu/DropmenuComponent.jsx";
@@ -26,7 +27,8 @@ export {
   ListComponent,
   PageComponent,
   PopupComponent,
-  WrapperComponent
+  WrapperComponent,
+  scss_variables
 };
 
 // TODO: Adding documentation

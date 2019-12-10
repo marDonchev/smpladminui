@@ -29,7 +29,7 @@
         border-bottom: 1px solid $color_Grey9 !important;
         box-sizing: border-box;
         &:not(:first-child):hover {
-          background-color: #fafafa !important;
+          background-color: $color_Grey10 !important;
         }
       }
 

@@ -1,5 +1,5 @@
 // Variables
-$color_Green: #4db312;
+
 //$color_Grey: #494c51;
 $color_Hover: #ddd;
 
@@ -15,8 +15,7 @@ $color_Grey8: #d4d4d4;
 $color_Grey9: #f1f1f1;
 $color_Grey10: #fafafa;
 $color_Grey11: #89909f;
-$color_Blue1: #3c82c6;
-$color_Yellow1: #fefad2;
+$color_Yellow: #fefad2;
 
 $size_borderWeight: 2px;
 $size_elementHeight: 17px;
@@ -34,13 +33,30 @@ $fontsize_14: 1rem;
 $fontsize_18: 1.1rem;
 $fontsize_24: 1.5rem;
 
-$color_Green1: #029c4f;
-$color_Red1: #ec403e;
-$color_defaultBlue: #3c82c6;
-$color_lightBlue: #9dc0e2;
+$color_Success: #029c4f;
+$color_Danger: #ec403e;
+$color_Primary: #3c82c6;
+$color_lightPrimary: lighten($color_Primary, 25); //#9dc0e2;
 $color_White: white;
-$color_PageBackground: #eef3f6;
+$color_PageBackground: lighten($color_Primary, 48); //#eef3f6;
 
 $icons_grey: #575f71;
 $icons_white: #ffffff;
 //B6B6B6
+//777777
+// To be used by webpack
+:export {
+  color_Primary: $color_Primary;
+
+  // font sizes
+  fontsize_11: $fontsize_11;
+  fontsize_12: $fontsize_12;
+  fontsize_13: $fontsize_13;
+  fontsize_14: $fontsize_14;
+  fontsize_18: $fontsize_18;
+  fontsize_24: $fontsize_24;
+
+  // icons
+  icons_grey: $icons_grey;
+  icons_white: $icons_white;
+}
