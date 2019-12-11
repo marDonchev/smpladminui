@@ -5,7 +5,7 @@ import "./IconComponent.scss";
 
 const propTypes = {
   type: PropTypes.string.isRequired,
-  variant: PropTypes.oneOfType([PropTypes.string.string, PropTypes.any]),
+  variant: PropTypes.oneOfType([PropTypes.string, PropTypes.any]),
   onClick: PropTypes.func,
   style: PropTypes.object,
   disabled: PropTypes.oneOfType([
@@ -13,10 +13,10 @@ const propTypes = {
     PropTypes.func,
     PropTypes.string
   ]),
-  primary: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
-  danger: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
-  success: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
-  processing: PropTypes.oneOfType([PropTypes.bool, PropTypes.any])
+  primary: PropTypes.bool,
+  danger: PropTypes.bool,
+  success: PropTypes.bool,
+  processing: PropTypes.bool
 };
 
 const defaultProps = {
@@ -60,7 +60,6 @@ class IconComponent extends Component {
           className={this.parseClasses()}
           style={style}
           onClick={this.handleClick}
-          {...this.props}
         />
       </React.Fragment>
     );

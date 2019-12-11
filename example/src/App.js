@@ -215,7 +215,7 @@ export default class App extends Component {
           <Button title="This is the title of the button">Normal Button</Button>
           <Button />
           <Button primary>+ add new</Button>
-          <Button processing={true} />
+          <Button processing />
           <Button disabled="disabled">Disabled</Button>
           <Button style={{ border: "1px solid red" }}>Styled</Button>
         </div>

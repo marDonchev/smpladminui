@@ -16,10 +16,10 @@ const propTypes = {
   type: PropTypes.string,
   time: PropTypes.number,
   onClose: PropTypes.func,
-  primary: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
-  danger: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
-  success: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
-  processing: PropTypes.oneOfType([PropTypes.bool, PropTypes.any])
+  primary: PropTypes.bool,
+  danger: PropTypes.bool,
+  success: PropTypes.bool,
+  processing: PropTypes.bool
 };
 
 const defaultProps = {

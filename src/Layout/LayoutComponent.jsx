@@ -14,10 +14,10 @@ const propTypes = {
   centerRightText: PropTypes.string,
   progress: PropTypes.number,
   style: PropTypes.object,
-  primary: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
-  danger: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
-  success: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
-  processing: PropTypes.oneOfType([PropTypes.bool, PropTypes.any])
+  primary: PropTypes.bool,
+  danger: PropTypes.bool,
+  success: PropTypes.bool,
+  processing: PropTypes.bool
 };
 
 const defaultProps = {
