@@ -17,7 +17,7 @@ const propTypes = {
   primary: PropTypes.bool,
   danger: PropTypes.bool,
   success: PropTypes.bool,
-  processing: PropTypes.bool
+  processing: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -34,7 +34,8 @@ const defaultProps = {
       label: "Dashboard",
       description: "This is explanation about the dashboard section",
       icon: <Icon type={"dashboard"} variant={"white"} />,
-      selected: true
+      selected: true,
+      onClick: null,
     },
     { type: "section", label: "MAIN SECTION" },
     {
@@ -42,28 +43,32 @@ const defaultProps = {
       label: "Structure",
       description: "This is explanation about the dashboard section",
       icon: <Icon type={"structure"} variant={"white"} />,
-      selected: false
+      selected: false,
+      onClick: null,
     },
     {
       type: "item",
       label: "Static Content",
       description: "This is explanation about the dashboard section",
       icon: <Icon type={"static"} variant={"white"} />,
-      selected: false
+      selected: false,
+      onClick: null,
     },
     {
       type: "item",
       label: "Collections",
       description: "This is explanation about the dashboard section",
       icon: <Icon type={"collections"} variant={"white"} />,
-      selected: false
+      selected: false,
+      onClick: null,
     },
     {
       type: "item",
       label: "Files",
       description: "This is explanation about the dashboard section",
       icon: <Icon type={"files"} variant={"white"} />,
-      selected: false
+      selected: false,
+      onClick: null,
     },
     { type: "section", label: "DEVELOPERS SECTION" },
     {
@@ -71,13 +76,14 @@ const defaultProps = {
       label: "Project Settings",
       description: "This is explanation about the dashboard section",
       icon: <Icon type={"projectsettings"} variant={"white"} />,
-      selected: false
-    }
+      selected: false,
+      onClick: null,
+    },
   ],
   primary: false,
   danger: false,
   success: false,
-  processing: false
+  processing: false,
 };
 
 class LayoutComponent extends Component {
@@ -136,6 +142,11 @@ class LayoutComponent extends Component {
                           !se.selected
                             ? "smpladmin_Layout_SideBar_item"
                             : "smpladmin_Layout_SideBar_item smpladmin_selected"
+                        }
+                        onClick={
+                          se.onClick && typeof se.onClick === "function"
+                            ? se.onClick
+                            : null
                         }
                       >
                         {se.icon ? se.icon : null}
