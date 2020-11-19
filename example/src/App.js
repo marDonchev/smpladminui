@@ -387,6 +387,12 @@ export default class App extends Component {
             This is label
             <input type="text" placeholder="Project name" />
           </label>
+          <label>
+            This is label
+            <select>
+              <option>My option</option>
+            </select>
+          </label>
           This is inside a wrapper
           <br />
           Don't have an account? Register one <a href="register.html">here</a>
