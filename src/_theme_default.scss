@@ -43,4 +43,12 @@
       background-color: $theme_color_dangerBackground_hover !important;
     }
   }
+
+  .smpladmin_disabled {
+    // color: $theme_color_successText !important;
+    // background-color: $theme_color_successBackground !important;
+    cursor: not-allowed !important;
+    // pointer-events: none;
+    opacity: 0.5;
+  }
 }

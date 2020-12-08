@@ -43,6 +43,8 @@ class ButtonComponent extends Component {
     if (this.props.danger) classes.push("smpladmin_danger");
     if (this.props.success) classes.push("smpladmin_success");
     if (this.props.processing) classes.push("smpladmin_processing");
+    if (this.props.disabled) classes.push("smpladmin_disabled");
+
     return classes.join(" ");
   };
 
