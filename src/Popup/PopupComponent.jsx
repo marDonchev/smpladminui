@@ -89,7 +89,10 @@ class PopupComponent extends Component {
   render() {
     const style = this.props.style || {};
 
-    const bodyClass = this.props.type === "message" ? "smpladmin_message" : "";
+    const bodyClass =
+      this.props.type === "smpladmin_Popup_Body message"
+        ? "smpladmin_Popup_Body smpladmin_message"
+        : "smpladmin_Popup_Body";
 
     return (
       <React.Fragment>
@@ -112,9 +115,9 @@ class PopupComponent extends Component {
               {this.props.hint ? (
                 <p className="smpladmin_Popup_Hint">{this.props.hint}</p>
               ) : null}
-              <p className={bodyClass}>
+              <div className={bodyClass}>
                 {this.props.children ? this.props.children : null}
-              </p>
+              </div>
               {this.props.footer ? (
                 <div className="smpladmin_Popup_Footer">
                   {this.props.footer}
