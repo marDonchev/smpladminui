@@ -395,6 +395,11 @@ export default class App extends Component {
           </label>
           This is inside a wrapper
           <br />
+          <label>
+            This is label
+            <input type="checkbox" />
+          </label>
+          
           Don't have an account? Register one <a href="register.html">here</a>
           .
           <hr size="1" noshade="noshade" />

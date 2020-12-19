@@ -65,6 +65,9 @@
         outline: none;
       }
     }
+    input[type="checkbox"] {
+      width: auto;
+    }
 
     ::placeholder {
       color: $color_Grey2;
