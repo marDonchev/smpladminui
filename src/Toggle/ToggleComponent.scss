@@ -1,0 +1,121 @@
+:global {
+  @import "./../variables";
+  @import "./../mixins";
+  @import "./../fonts";
+  @import "./../theme_variables";
+
+  // Colors of the component
+  $color_Active: $color_Primary;
+  $color_Grey: $theme_color_defaultText;
+  $color_Hover: #ddd;
+
+  // Sizes of the component
+  $size_borderWeight: 2px;
+  $size_elementHeight: 17px;
+
+  div.smpladmin_Toggle {
+    border: 1px solid red;
+
+    border: $size_borderWeight solid $color_Grey;
+    width: 30px;
+    height: $size_elementHeight;
+    font-size: 0;
+    display: block;
+    margin: 0.5rem !important;
+    margin-left: 0 !important;
+    position: relative;
+    cursor: pointer;
+
+    -webkit-border-radius: $size_elementHeight;
+    -moz-border-radius: $size_elementHeight;
+    border-radius: $size_elementHeight;
+
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background-color: $color_Hover;
+    }
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+    i {
+      content: "";
+      position: absolute;
+      width: $size_elementHeight;
+      height: $size_elementHeight;
+      top: calc(0px - #{$size_borderWeight});
+      left: calc(0px - #{$size_borderWeight});
+
+      border: $size_borderWeight solid $color_Grey;
+      background: white;
+
+      -webkit-border-radius: $size_elementHeight;
+      -moz-border-radius: $size_elementHeight;
+      border-radius: $size_elementHeight;
+
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+    }
+
+    .smpladmin_Toggle_Children {
+      margin-left: 40px;
+      white-space: nowrap;
+      color: $theme_color_defaultText;
+      font-family: $font_roboto;
+      font-size: $fontsize_13;
+      /*font-weight: 500;*/
+    }
+
+    &.smpladmin_True {
+      border-color: $color_Active;
+      background-color: $color_Active;
+
+      i {
+        border-color: $color_Active;
+        left: calc(30px - #{$size_elementHeight} - #{$size_borderWeight});
+      }
+    }
+
+
+    &.smpladmin_success {
+      border-color: $color_Success;
+      background-color: $color_Success;
+      i {
+        border-color: $color_Success;
+      }
+      &.smpladmin_True {
+        background-color: $color_Success !important;
+      }
+    }
+    &.smpladmin_primary {
+      border-color: $color_Primary;
+      background-color: $color_Primary;
+      i {
+        border-color: $color_Primary;
+      }
+      &.smpladmin_True {
+        background-color: $color_Primary !important;
+      }
+    }
+    &.smpladmin_danger {
+      border-color: $color_Danger;
+      background-color: $color_Danger;
+      i {
+        border-color: $color_Danger;
+      }
+      &.smpladmin_True {
+        background-color: $color_Danger !important;
+      }
+    }
+
+  }
+}

@@ -89,6 +89,43 @@ class Example extends Component {
 
 ---
 
+## Toggle
+
+> This component is a simple styled toggle which can render a toggle knob in few different styles depending on the props and handling onToggle event upon itself.
+
+![Toggle Component](./README_images/preview_toggle.png)
+<br />
+
+#### Usage
+
+```jsx
+import React, { Component } from "react";
+
+import { ToggleComponent as Toggle } from "smpladminui";
+
+class Example extends Component {
+  render() {
+    return <Toggle label={"No Action"} danger value={this.state.toggleValue} onToggle={(value) => this.setState({toggleValue})}/>;
+  }
+}
+```
+
+#### Props
+
+| Prop name    | Type                       | Default  | Description                                                                                                                                   |
+| ------------ | :------------------------- | :------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `style`      | object                     | `{}`     | Style object to be passed to the rendered button                                                                                              |
+| `label`      | string                     | Empty | This is the label on the toggle. <br /><sub>_Note: in case there are children passed to this component, they will be rendered instead._</sub> |
+| `disabled`   | boolean,function or string | none     | Renders the button as disabled                                                                                                                |
+| `primary`    | boolean, any               | false    | Renders the button as primary                                                                                                                 |
+| `danger`     | boolean, any               | false    | Renders the button as danger                                                                                                                  |
+| `processing` | boolean, any               | false    | Renders the button as processing (with a spinning icon)                                                                                       |
+| `onToggle`    | function                   | none     | Handler for the onToggle event of the component. Returns the value of the toggle (true/false)                                                                                                   |
+
+<br />
+
+---
+
 ## Card
 
 > This component is a simple styled card with header, body and footer. It can be rendered in different variations depending on the props passed to it.

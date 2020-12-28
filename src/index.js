@@ -15,6 +15,7 @@ import ListComponent from "./List/ListComponent.jsx";
 import PageComponent from "./Page/PageComponent.jsx";
 import PopupComponent from "./Popup/PopupComponent.jsx";
 import WrapperComponent from "./Wrapper/WrapperComponent.jsx";
+import ToggleComponent from "./Toggle/ToggleComponent.jsx";
 
 export default ButtonComponent;
 
@@ -28,6 +29,7 @@ export {
   PageComponent,
   PopupComponent,
   WrapperComponent,
+  ToggleComponent,
   scss_variables
 };
 

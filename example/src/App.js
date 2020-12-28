@@ -10,6 +10,7 @@ import {
   PopupComponent as Popup,
   IconComponent as Icon,
   WrapperComponent as Wrapper,
+  ToggleComponent as Toggle,
   scss_variables as SCSS_Variables
 } from "smpladminui";
 
@@ -19,7 +20,8 @@ export default class App extends Component {
     this.state = {
       popupVisible: false,
       popup2Visible: false,
-      popup3Visible: false
+      popup3Visible: false,
+      toggleValue: false
     };
   }
 
@@ -219,6 +221,28 @@ export default class App extends Component {
           <Button disabled="disabled">Disabled</Button>
           <Button style={{ border: "1px solid red" }}>Styled</Button>
         </div>
+
+        <Wrapper>
+          <hr />
+          <br />
+          <h1>Toggle</h1>
+        </Wrapper>
+        <div style={{ display: "block" }}>
+          <Toggle label="Something here" value={this.state.toggleValue} onToggle={(value) => this.setState({toggleValue: value})}/>
+          <Toggle success label="Success" value={this.state.toggleValue} onToggle={(value) => this.setState({toggleValue: value})}/>
+          <Toggle primary label="Primary" value={this.state.toggleValue} onToggle={(value) => this.setState({toggleValue: value})}/>
+          <Toggle danger label="Danger" value={this.state.toggleValue} onToggle={(value) => this.setState({toggleValue: value})}/>
+          <Toggle disabled>Disabled toggle</Toggle>
+        </div>
+        <div style={{ display: "block" }}>
+          <Button label={"Toggle"} onClick={(e)=>this.setState({toggleValue: !this.state.toggleValue})}/>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
         <Wrapper>
           <hr />
           <br />
@@ -399,7 +423,7 @@ export default class App extends Component {
             This is label
             <input type="checkbox" />
           </label>
-          
+
           Don't have an account? Register one <a href="register.html">here</a>
           .
           <hr size="1" noshade="noshade" />
