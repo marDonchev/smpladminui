@@ -25,7 +25,7 @@ class ToggleComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: false
+      value: this.props.value?this.props.value:false
     };
   }
 
