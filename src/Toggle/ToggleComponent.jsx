@@ -16,7 +16,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  label: "Toggle",
+  label: "",
   disabled: false,
   value: false,
 };
