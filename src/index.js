@@ -16,6 +16,7 @@ import PageComponent from "./Page/PageComponent.jsx";
 import PopupComponent from "./Popup/PopupComponent.jsx";
 import WrapperComponent from "./Wrapper/WrapperComponent.jsx";
 import ToggleComponent from "./Toggle/ToggleComponent.jsx";
+import ImagesListComponent from "./ImagesList/ImagesListComponent.jsx";
 
 export default ButtonComponent;
 
@@ -30,6 +31,7 @@ export {
   PopupComponent,
   WrapperComponent,
   ToggleComponent,
+  ImagesListComponent,
   scss_variables
 };
 

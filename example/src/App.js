@@ -11,6 +11,7 @@ import {
   IconComponent as Icon,
   WrapperComponent as Wrapper,
   ToggleComponent as Toggle,
+  ImagesListComponent as ImagesList,
   scss_variables as SCSS_Variables
 } from "smpladminui";
 
@@ -236,6 +237,34 @@ export default class App extends Component {
         </div>
         <div style={{ display: "block" }}>
           <Button label={"Toggle"} onClick={(e)=>this.setState({toggleValue: !this.state.toggleValue})}/>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <Wrapper>
+          <hr />
+          <br />
+          <h1>ImagesList</h1>
+        </Wrapper>
+        <div style={{ display: "block" }}>
+          <ImagesList borderColor="#eef3f6" max={4} itemStyle={{borderRadius: "100%"}} list={[
+            "https://upload.wikimedia.org/wikipedia/commons/3/35/Neckertal_20150527-6384.jpg",
+            "https://www.tom-archer.com/wp-content/uploads/2017/03/landscape-photography-tom-archer-2.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5KCQSne-FWA1ek_gRsXLF477vrjUfDJcubg&usqp=CAU",
+            "https://previews.123rf.com/images/welcomia/welcomia1207/welcomia120700069/14300992-south-dakota-black-hills-landscape-hills-and-trees-nature-photo-collection-south-dakota-u-s-a-.jpg",
+            "https://www.tom-archer.com/wp-content/uploads/2018/06/milford-sound-night-fine-art-photography-new-zealand.jpg",
+            "https://lh3.googleusercontent.com/qsm1GPWNVY0D2IADaRmDKkQrOmZeDahaAOjuHcW7iZ8XTTJiFNj5nfSa8-2D4RGewn7av_FpEipYlCMQFoQsGjz3=w640-h400-e365-rj-sc0x00ffffff",
+            "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/moraine-blue-lake-banff-mountain-landscape-canada-pierre-leclerc-photography.jpg",
+            "https://cdn2.wanderlust.co.uk/media/1028/cropped-shutterstock_497799013.jpg?anchor=center&mode=crop&width=1200&height=0&rnd=131915974290000000",
+            "https://www.pandotrip.com/wp-content/uploads/2016/07/li-Photo-by-Santo-980x572.jpg",
+            "https://images.theconversation.com/files/125391/original/image-20160606-13080-s7o3qu.jpg?ixlib=rb-1.1.0&rect=273%2C0%2C2639%2C1379&q=45&auto=format&w=926&fit=clip",
+            "https://iso.500px.com/wp-content/uploads/2017/10/PhotographingTwilight_TannerWendellStewart-218136823.jpg",
+            "https://i.pinimg.com/originals/0f/e9/c7/0fe9c795d3dac2ec2f57315fb6c43e58.jpg",
+            "https://cdn.wallpapersafari.com/31/97/O15IDB.jpg",
+          ]} />
         </div>
         <br />
         <br />

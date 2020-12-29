@@ -1,0 +1,63 @@
+:global {
+  @import "./../variables";
+  @import "./../mixins";
+  @import "./../fonts";
+  @import "./../theme_variables";
+
+  // Colors of the component
+  $color_Active: $color_Primary;
+  $color_Grey: $theme_color_defaultText;
+  $color_Hover: #ddd;
+
+  // Sizes of the component
+  $size_borderWeight: 2px;
+  $size_elementHeight: 17px;
+
+  div.smpladmin_ImagesList {
+    // border: 1px solid red;
+    display: inline-flex;
+    flex-flow: row-reverse;
+    cursor: default;
+    > * {
+      border: 1px solid white;
+      width: 30px;
+      height: 30px;
+      background-size: cover;
+      background-position: center;
+      margin-left: -10px;
+      &:last-child {
+        margin-left: 0;
+      }
+      &.smpladmin_ImagesList_ext {
+        border: none;
+        line-height: 1.5;
+        width: 20px;
+        margin-left: 5px;
+      }
+    }
+
+    //
+    // -webkit-border-radius: $size_elementHeight;
+    // -moz-border-radius: $size_elementHeight;
+    // border-radius: $size_elementHeight;
+
+    // -webkit-transition: all 0.2s ease-out;
+    // -moz-transition: all 0.2s ease-out;
+    // -o-transition: all 0.2s ease-out;
+    // transition: all 0.2s ease-out;
+
+    // &:focus {
+    //   outline: none;
+    // }
+    // &:hover {
+    //   background-color: $color_Hover;
+    // }
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+
+
+  }
+}
