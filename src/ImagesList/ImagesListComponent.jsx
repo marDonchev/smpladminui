@@ -61,10 +61,10 @@ class ImagesListComponent extends Component {
           style={style}
         >
         {ext}
-        {list.reverse().map(img => {
+        {list.reverse().map((img, imgIndex) => {
             const itemStyle = {...this.props.itemStyle, backgroundImage: `url(${img})`, borderColor: this.props.borderColor};
             return (
-              <div style={itemStyle} />
+              <div key={imgIndex} style={itemStyle} />
             );
         })}
         </div>
