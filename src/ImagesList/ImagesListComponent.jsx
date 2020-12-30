@@ -54,7 +54,6 @@ class ImagesListComponent extends Component {
   }
 
   handleSelect = e => {
-    console.log('handleSelect e', e);
     let {selected} = this.state;
     if (selected.includes(e)) {
       selected = selected.filter(s=>s!==e);
