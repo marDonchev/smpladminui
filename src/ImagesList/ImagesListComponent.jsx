@@ -14,6 +14,14 @@ const propTypes = {
   borderColor: PropTypes.string,
   max: PropTypes.number,
   itemStyle: PropTypes.object,
+  selectable: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.func,
+    PropTypes.string
+  ]),
+  itemUrlKey: PropTypes.string,
+  itemExtraKey: PropTypes.string,
+  onSelect: PropTypes.func,
 };
 
 const defaultProps = {
@@ -22,14 +30,18 @@ const defaultProps = {
   style: {},
   borderColor: "white",
   max: null,
-  itemStyle: {}
+  itemStyle: {},
+  selectable: false,
+  itemUrlKey: "url",
+  itemExtraKey: "name",
 };
 
 class ImagesListComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: this.props.list?this.props.list:false
+      list: this.props.list?this.props.list:false,
+      selected: []
     };
   }
 
@@ -39,9 +51,22 @@ class ImagesListComponent extends Component {
     }
   }
 
+  handleSelect = e => {
+    console.log('handleSelect e', e);
+    let {selected} = this.state;
+    if (selected.includes(e)) {
+      selected = selected.filter(s=>s!==e);
+    } else {
+      selected.push(e);
+    }
+    this.setState({selected});
+    if (this.props.onSelect) this.props.onSelect(selected);
+  };
+
   parseClasses = () => {
     let classes = ["smpladmin_ImagesList"];
     if (this.props.disabled) classes.push("smpladmin_disabled");
+    if (this.props.selectable) classes.push("smpladmin_selectable");
     return classes.join(" ");
   };
 
@@ -49,7 +74,7 @@ class ImagesListComponent extends Component {
     const style = this.props.style || {};
     let { list } = this.state;
     let ext = "";
-    if (this.props.max < list.length) {
+    if (this.props.max && this.props.max < list.length) {
       ext = (<div className="smpladmin_ImagesList_ext">...</div>);
       list = list.splice(0,this.props.max);
     }
@@ -61,12 +86,25 @@ class ImagesListComponent extends Component {
           style={style}
         >
         {ext}
-        {list.reverse().map((img, imgIndex) => {
+        {!this.props.selectable && list.reverse().map((img, imgIndex) => {
             const itemStyle = {...this.props.itemStyle, backgroundImage: `url(${img})`, borderColor: this.props.borderColor};
             return (
-              <div key={imgIndex} style={itemStyle} />
+              <div key={imgIndex} style={itemStyle}>
+                <span></span>
+              </div>
             );
         })}
+
+        {this.props.selectable === true && list.map((img, imgIndex) => {
+            const itemStyle = {...this.props.itemStyle, backgroundImage: `url(${img[this.props.itemUrlKey]})`, borderColor: this.props.borderColor};
+            return (
+              <div key={imgIndex} onClick={(e) => this.handleSelect(img[this.props.itemUrlKey])} className={this.state.selected.includes(img[this.props.itemUrlKey])?"smpladmin_selected":null}>
+                <div style={itemStyle} />
+                <span>{img[this.props.itemExtraKey]}</span>
+              </div>
+            );
+        })}
+
         </div>
       </React.Fragment>
     );

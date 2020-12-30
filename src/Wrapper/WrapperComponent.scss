@@ -40,6 +40,7 @@
     [type="time"],
     [type="url"],
     [type="color"],
+    .smpladmin_ImagesList.smpladmin_selectable,
     textarea {
       overflow: visible;
       font-family: inherit;
@@ -63,6 +64,18 @@
         box-shadow: none;
         border: 1px solid $color_Primary;
         outline: none;
+      }
+    }
+
+    .smpladmin_ImagesList.smpladmin_selectable {
+      display: flex !important;
+      flex-direction: column !important;
+      height: 130px !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      padding: 1px;
+      > * > span {
+        top: 7px;
       }
     }
     input[type="checkbox"] {

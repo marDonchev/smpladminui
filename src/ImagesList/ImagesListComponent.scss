@@ -57,7 +57,46 @@
       cursor: not-allowed;
     }
 
-
+    &.smpladmin_selectable {
+      display: flex;
+      flex-direction: column;
+      height: 130px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      .smpladmin_ImagesList_ext {
+        display: none;
+      }
+      > * {
+        margin:0px;
+        border:0;
+        position: relative;
+        flex-shrink: 0;
+        width: 100%;
+        height: auto;
+        &:hover {
+          background-color: $color_Hover;
+        }
+        &.smpladmin_selected {
+          color: $theme_color_primaryText_hover;
+          background-color: $theme_color_primaryBackground_hover;
+        }
+        > div {
+          width: 30px;
+          height: 30px;
+          margin:1px;
+          background-size: cover;
+          background-position: center;
+        }
+        > span {
+          position: absolute;
+          top: 8px;
+          left: 40px;
+          color: $theme_color_defaultText;
+          font-family: $font_roboto;
+          font-size: $fontsize_13;
+        }
+      }
+    }
 
   }
 }
