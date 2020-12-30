@@ -270,7 +270,7 @@ export default class App extends Component {
         <br />
         Selectable
         <div style={{ display: "block" }}>
-          <ImagesList selectable itemSecondaryKey="extra" onSelect={(values) => console.info('values', values)} borderColor="#eef3f6" fffitemStyle={{borderRadius: "100%"}} list={[
+          <ImagesList selectable selected={["https://cdn.wallpapersafari.com/31/97/O15IDB.jpg","https://upload.wikimedia.org/wikipedia/commons/3/35/Neckertal_20150527-6384.jpg"]} itemSecondaryKey="extra" onSelect={(values) => console.info('values', values)} borderColor="#eef3f6" fffitemStyle={{borderRadius: "100%"}} list={[
             {url:"https://upload.wikimedia.org/wikipedia/commons/3/35/Neckertal_20150527-6384.jpg",name: "Image 1",extra: "Extra 1"},
             {url:"https://www.tom-archer.com/wp-content/uploads/2017/03/landscape-photography-tom-archer-2.jpg",name: "Image 2",extra: "Extra 2"},
             {url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5KCQSne-FWA1ek_gRsXLF477vrjUfDJcubg&usqp=CAU",name: "Image 3",extra: "Extra 3"},

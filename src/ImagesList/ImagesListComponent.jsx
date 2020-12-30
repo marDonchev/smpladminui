@@ -23,6 +23,7 @@ const propTypes = {
   itemExtraKey: PropTypes.string,
   itemSecondaryKey: PropTypes.string,
   onSelect: PropTypes.func,
+  selected: PropTypes.array,
 };
 
 const defaultProps = {
@@ -36,6 +37,7 @@ const defaultProps = {
   itemUrlKey: "url",
   itemExtraKey: "name",
   itemSecondaryKey: null,
+  selected: [],
 };
 
 class ImagesListComponent extends Component {
@@ -43,13 +45,16 @@ class ImagesListComponent extends Component {
     super(props);
     this.state = {
       list: this.props.list?this.props.list:false,
-      selected: []
+      selected: this.props.selected?this.props.selected:[]
     };
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.list !== prevProps.list) {
       this.setState({list: this.props.list});
+    }
+    if (this.props.selected && this.props.selected !== prevProps.selected) {
+      this.setState({selected: this.props.selected});
     }
   }
 
