@@ -21,6 +21,7 @@ const propTypes = {
   ]),
   itemUrlKey: PropTypes.string,
   itemExtraKey: PropTypes.string,
+  itemSecondaryKey: PropTypes.string,
   onSelect: PropTypes.func,
 };
 
@@ -34,6 +35,7 @@ const defaultProps = {
   selectable: false,
   itemUrlKey: "url",
   itemExtraKey: "name",
+  itemSecondaryKey: null,
 };
 
 class ImagesListComponent extends Component {
@@ -101,6 +103,7 @@ class ImagesListComponent extends Component {
               <div key={imgIndex} onClick={(e) => this.handleSelect(img[this.props.itemUrlKey])} className={this.state.selected.includes(img[this.props.itemUrlKey])?"smpladmin_selected":null}>
                 <div style={itemStyle} />
                 <span>{img[this.props.itemExtraKey]}</span>
+                {this.props.itemSecondaryKey && img[this.props.itemSecondaryKey] ? (<span>{img[this.props.itemSecondaryKey]}</span>):null}
               </div>
             );
         })}
