@@ -76,6 +76,7 @@
       padding: 1px;
       > * > span {
         top: 6px !important;
+        text-transform: none !important;
       }
     }
     input[type="checkbox"] {
