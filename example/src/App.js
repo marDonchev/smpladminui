@@ -12,6 +12,7 @@ import {
   WrapperComponent as Wrapper,
   ToggleComponent as Toggle,
   ImagesListComponent as ImagesList,
+  StatComponent as Stat,
   scss_variables as SCSS_Variables
 } from "smpladminui";
 
@@ -162,6 +163,7 @@ export default class App extends Component {
   PopupComponent as Popup,
   IconComponent as Icon,
   WrapperComponent as Wrapper,
+  StatComponent as Stat,
   scss_variables as SCSS_Variables
 } from "smpladminui";`}
             </code>
@@ -582,7 +584,20 @@ export default class App extends Component {
           <h6>Title 6 / H6</h6>
           <button>My Button</button>
         </Wrapper>
-        <Wrapper>
+        <Wrapper style={{ clear: "both" }}>
+          <hr />
+          <br />
+          <h1>Stat</h1>
+          <br />
+        </Wrapper>
+        <Stat
+          dropMenu={<Dropmenu />}
+          style={{width: 300}}
+          diff={-13.5}
+        />
+        <br />
+        <br />
+        <Wrapper style={{ clear: "both" }}>
           <hr />
           <br />
           <h1>SCSS Variables</h1>

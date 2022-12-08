@@ -5,7 +5,7 @@ import "./ToggleComponent.scss";
 
 const propTypes = {
   label: PropTypes.string,
-  onClick: PropTypes.func,
+  onToggle: PropTypes.func,
   style: PropTypes.object,
   disabled: PropTypes.oneOfType([
     PropTypes.bool,
