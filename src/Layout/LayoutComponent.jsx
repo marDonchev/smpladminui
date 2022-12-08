@@ -12,6 +12,8 @@ const propTypes = {
   centerSublabel: PropTypes.string,
   centerRightIcon: PropTypes.object,
   centerRightText: PropTypes.string,
+  footerLabel: PropTypes.string,
+  footerIcon: PropTypes.object,
   progress: PropTypes.number,
   style: PropTypes.object,
   primary: PropTypes.bool,
@@ -26,7 +28,9 @@ const defaultProps = {
   centerLabel: "Please login to the system first",
   centerSublabel: "Total of 1,567,234 hits this month",
   centerRightIcon: <Icon type={"logout"} variant={"grey"} />,
-  centerRightText: "Martin D.",
+  centerRightText: "Administrator",
+  footerLabel: "Adminstrator",
+  footerIcon: <Icon type={"settings"} variant={"white"} />,
   progress: null,
   sidebarElements: [
     {
@@ -170,8 +174,8 @@ class LayoutComponent extends Component {
                 })}
 
               <div className="smpladmin_Layout_Footer">
-                <span>Martin D.</span>
-                <Icon type={"settings"} variant={"white"} />
+                <span>{this.props.footerLabel}</span>
+                {this.props.footerIcon && this.props.footerIcon}
               </div>
             </div>
             <div className="smpladmin_Layout_Page">
