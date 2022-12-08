@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import "./StatComponent.scss";
-import Button from "./../Button/ButtonComponent.jsx";
 import DropmenuComponent from "../Dropmenu/DropmenuComponent.jsx";
 
 const propTypes = {
@@ -31,11 +30,11 @@ const propTypes = {
 
 const defaultProps = {
   title: <React.Fragment>Stat Title</React.Fragment>,
-  diff: 12.5,
+  diff: 0,
   diffPrefix: "%",
   diffSuffix: "last month",
-  value: 12563,
-  subtitle: "Aug/1 - Sep/15",
+  value: 0,
+  subtitle: "subtitle",
   dropMenu: null,
   variant: "full",
   style: {}
