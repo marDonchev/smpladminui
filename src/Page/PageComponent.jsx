@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./PageComponent.scss";
 
 const propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   stickyHeader: PropTypes.bool,
   style: PropTypes.object,
   primary: PropTypes.bool,

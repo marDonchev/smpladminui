@@ -6,13 +6,13 @@ import "./LayoutComponent.scss";
 import Icon from "./../Icon/IconComponent.jsx";
 
 const propTypes = {
-  leftLabel: PropTypes.string,
-  leftSublabel: PropTypes.string,
-  centerLabel: PropTypes.string,
-  centerSublabel: PropTypes.string,
+  leftLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  leftSublabel: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  centerLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  centerSublabel: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   centerRightIcon: PropTypes.object,
-  centerRightText: PropTypes.string,
-  footerLabel: PropTypes.string,
+  centerRightText: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  footerLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   footerIcon: PropTypes.object,
   progress: PropTypes.number,
   style: PropTypes.object,

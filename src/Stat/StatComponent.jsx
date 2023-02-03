@@ -16,8 +16,8 @@ const propTypes = {
   diff: PropTypes.number,
   diffPrefix: PropTypes.string,
   diffSuffix: PropTypes.string,
-  value: PropTypes.string,
-  subtitle: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   dropMenu: PropTypes.oneOfType([
     DropmenuComponent
   ]),

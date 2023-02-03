@@ -5,7 +5,7 @@ import "./PopupComponent.scss";
 
 const propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  hint: PropTypes.string,
+  hint: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   footer: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.func,
